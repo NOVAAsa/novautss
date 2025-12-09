@@ -3,13 +3,13 @@ import 'dashboard_page.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
+
   @override
   State<LoginPage> createState() => _LoginPageState();
 }
 
 class _LoginPageState extends State<LoginPage> {
-  final TextEditingController _userController =
-      TextEditingController(text: "Firda Nova Safitri");
+  final TextEditingController _userController = TextEditingController(text: "Firda Nova Safitri");
   final TextEditingController _passController = TextEditingController();
 
   void _login() {
@@ -49,15 +49,11 @@ class _LoginPageState extends State<LoginPage> {
                     textAlign: TextAlign.center,
                   ),
                   const SizedBox(height: 22),
-
-                  // avatar
                   const CircleAvatar(
                     radius: 46,
                     backgroundImage: AssetImage('assets/images/NOVA.jpg'),
                   ),
                   const SizedBox(height: 18),
-
-                  // username
                   TextField(
                     controller: _userController,
                     decoration: InputDecoration(
@@ -69,8 +65,6 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                   ),
                   const SizedBox(height: 12),
-
-                  // password
                   TextField(
                     controller: _passController,
                     obscureText: true,
@@ -83,15 +77,12 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                   ),
                   const SizedBox(height: 20),
-
-                  // login button
                   SizedBox(
                     width: double.infinity,
                     height: 48,
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(12)),
+                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
                       ),
                       onPressed: _login,
                       child: const Text('Login', style: TextStyle(fontSize: 16)),
